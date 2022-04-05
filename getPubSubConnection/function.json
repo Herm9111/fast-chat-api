@@ -14,13 +14,6 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    },
-    {
-        "type": "webPubSubConnection",
-        "name": "connection",
-        "hub": "fastChat",
-        "userId": "{headers.x-ms-client-principal-name}",
-        "direction": "in"
     }
   ],
   "scriptFile": "../dist/getPubSubConnection/index.js"
