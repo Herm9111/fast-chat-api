@@ -3,10 +3,8 @@ const { WebPubSubServiceClient } = require("@azure/web-pubsub");
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest, connection): Promise<void> {
     const serviceClient = new WebPubSubServiceClient(process.env['WebPubSubConnectionString'], "fastChat");
-    console.log(req.headers['headers.x-ms-client-principal-name']);
-    console.log(req.headers);
     const token = await serviceClient.getClientAccessToken({
-         userId: req.headers['headers.x-ms-client-principal-name'],
+         userId: req.headers['x-ms-client-principal-name'],
          roles: [ "webpubsub.sendToGroup", "webpubsub.joinLeaveGroup" ]
         });
 
