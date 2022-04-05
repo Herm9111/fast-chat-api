@@ -13,11 +13,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         headers: {
             'Content-Type': 'application/json'
         },
-        body: {
-            accessToken: token,
-            baseUrl: "wss://fast-chat-ps.webpubsub.azure.com/client/hubs/fastChat",
-            url: `wss://fast-chat-ps.webpubsub.azure.com:443/client/hubs/fastChat?access_token=${token}`
-        }
+        body: token
     };
 
 };

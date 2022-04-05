@@ -10,13 +10,6 @@
 		},
 		{
 			"type": "shell",
-			"label": "npm build (functions)",
-			"command": "npm run build",
-			"dependsOn": "npm install (functions)",
-			"problemMatcher": "$tsc"
-		},
-		{
-			"type": "shell",
 			"label": "npm install (functions)",
 			"command": "npm install"
 		},
@@ -26,6 +19,16 @@
 			"command": "npm prune --production",
 			"dependsOn": "npm build (functions)",
 			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "npm build (functions)",
+			"command": "npm run build",
+			"dependsOn": [
+				"func: extensions install",
+				"npm install (functions)"
+			],
+			"problemMatcher": "$tsc"
 		}
 	]
 }
