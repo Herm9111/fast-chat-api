@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "type": "webPubSubTrigger",
+      "direction": "in",
+      "name": "pubSubIn",
+      "hub": "fastChat",
+      "eventName": "connected",
+      "eventType": "system"
+    },
+    {
+      "type": "webPubSub",
+      "name": "pubSubOut",
+      "hub": "fastChat",
+      "direction": "out"
+    }
+  ],
+  "scriptFile": "../dist/newUserConnected/index.js"
+}
