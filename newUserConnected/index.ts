@@ -1,6 +1,6 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 
-const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest, data, pubSubOut): Promise<void> {
+const webPubSubTrigger: AzureFunction = async function (context: Context, req: HttpRequest, data, pubSubOut): Promise<void> {
     context.log('HTTP trigger function processed a request.');
     
     console.log('Request from: ', context.bindingData.request.connectionContext.userId);
@@ -9,4 +9,4 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
 };
 
-export default httpTrigger;
+export default webPubSubTrigger;
