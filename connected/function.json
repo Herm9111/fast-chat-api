@@ -15,5 +15,5 @@
       "direction": "out"
     }
   ],
-  "scriptFile": "../dist/newUserConnected/index.js"
+  "scriptFile": "../dist/connected/index.js"
 }
