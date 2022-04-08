@@ -3,7 +3,7 @@
     {
       "type": "webPubSubTrigger",
       "direction": "in",
-      "name": "pubSubIn",
+      "name": "data",
       "hub": "fastchat",
       "eventName": "connected",
       "eventType": "system"
