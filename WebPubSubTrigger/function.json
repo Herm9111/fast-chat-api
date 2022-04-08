@@ -1,6 +1,7 @@
 {
   "bindings": [
     {
+      "authLevel": "anonymous",
       "type": "webPubSubTrigger",
       "direction": "in",
       "name": "data",
